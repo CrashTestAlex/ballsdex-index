@@ -64,5 +64,23 @@
       "Funding": "https://ko-fi.com/rayhsueh"
     },
     "dependencies": []
+  },
+  {
+    "id": "leaderboard",
+    "status": "unapproved",
+    "repo": "https://github.com/cewlgruyere/Ballsdex-leaderboard-pack-v3",
+    "branch": "main",
+    "name": "leaderboard",
+    "version": "1.0.1",
+    "description": "Leaderboard extension for BallsDex",
+    "license": "Apache-2.0",
+    "authors": [
+      {
+        "name": "cewlgruyere",
+        "email": "gruyere@remicrodex.com"
+      }
+    ],
+    "urls": {},
+    "dependencies": []
   }
 ]
