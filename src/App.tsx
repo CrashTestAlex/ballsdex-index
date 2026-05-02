@@ -2,8 +2,9 @@ import { useState, useEffect, useMemo } from 'react';
 import type { Cog } from './types';
 import { PackageCard } from './components/PackageCard';
 import { SubmitPage } from './components/SubmitPage';
+import { InstallPage } from './components/InstallPage';
 
-type Page = 'index' | 'submit';
+type Page = 'index' | 'install' | 'submit';
 
 // ── Icon ────────────────────────────────────────────────────────────────────
 
@@ -147,6 +148,16 @@ export default function App() {
               Packages
             </button>
             <button
+              onClick={() => setPage('install')}
+              className={`rounded-md px-3 py-1.5 transition-colors ${
+                page === 'install'
+                  ? 'bg-zinc-800 text-zinc-100'
+                  : 'text-zinc-400 hover:text-zinc-200'
+              }`}
+            >
+              Install
+            </button>
+            <button
               onClick={() => setPage('submit')}
               className={`rounded-md px-3 py-1.5 transition-colors ${
                 page === 'submit'
@@ -180,6 +191,8 @@ export default function App() {
       {/* ── Main ── */}
       {page === 'submit' ? (
         <SubmitPage />
+      ) : page === 'install' ? (
+        <InstallPage />
       ) : (
         <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
           {loading && <Spinner />}
